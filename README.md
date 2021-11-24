@@ -1,2 +1,2 @@
-# portifolio
-portifolio do desenvolvedor
+# portfólio
+portfólio do desenvolvedor
