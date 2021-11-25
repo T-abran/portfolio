@@ -1,3 +1,6 @@
+
+/* emojis pegos no site https://www.webfx.com/tools/emoji-cheat-sheet/ */ 
+/* cores de gradientes pegas no site Uigradientes https://uigradients.com/#MinimalRed */
 /* icones pegos no site cdnjs https://cdnjs.com/libraries/font-awesome/6.0.0-beta3 */
 /* incon feito no site Favicon https://favicon.io/favicon-generator/ */
 /* fontes pegas pelo googlefontes https://fonts.google.com/ */
@@ -29,8 +32,18 @@ header{
 .img-wrapper img{    /* formatando imagens dentro de img-wrapper, */
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.5
+    object-fit: cover;    /* O conteúdo substituído é dimensionado para manter sua proporção e preencher toda a caixa de conteúdo do elemento: */
+    opacity: 0.5;   /* especifica a transparência de um elemento, isto é, o grau no qual o background atrás do elemento é sobreposto */
+    animation: zoom 25s /* adicionando animação de entrada */
+}
+
+@keyframes zoom { /* colocando efeito de zoom na imagem*/
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .banner{
@@ -44,5 +57,49 @@ header{
     font-size: 3.5rem;    /* A rem ("root em") é o tamanho de fonte do elemento-raiz do documento, que no caso é o body. */
     font-family: "baloo 2",serif;    /* colocar uma fonte reserva caso não ache a primeira */
     font-weight: 280;    /* especifica o peso ou a intensidade da fonte (ex.: negrito). */
-    text-shadow: 20;    /* acrescenta sombras ao texto. */
+    text-shadow: .3rem .4rem  2px rgba(0, 0, 0, .4 );/* acrescenta sombras ao texto. */
+    line-height: 3.5rem;    /* altura da linha */
+    margin-bottom: 2rem;    /* espaçamento de baixo */
+    animation: noveBanner 1s 0.7s forwards;
+    opacity: 0;
 }
+@keyframes noveBanner{ /* colocando efeitos nas mensagens */
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.banner p{
+    font-family: "Josefin Slab", serif;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: .2rem .2rem  rgba(0, 0, 0, .4 );
+    margin-bottom: 2rem;
+    animation: noveBanner 1s 0.8s forwards;
+    opacity: 0;
+}
+
+.banner button{
+    font-family: "Mulish", serif;
+    color: #000;
+    letter-spacing: .1rem;    /* espaçamento das letras */
+    text-transform: uppercase;    /* tranformando letras em maiusculas */
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    padding: 1rem 3rem;    /*  cima e baixo 1rem, direita e esquerda 3rem */
+    border: none;    /* borda nula */
+    border-radius: 5px;    /* arredondamento da borda */
+    cursor: pointer;    /* cursor virar ponteiro */
+    animation: noveBanner 1s 0.9s forwards;
+    opacity: 0;
+}
+
+.banner button:hover{
+    color: #fff; /* evento no botao, mudando a cor*/
+}
+
