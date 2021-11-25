@@ -1,3 +1,48 @@
+/* icones pegos no site cdnjs https://cdnjs.com/libraries/font-awesome/6.0.0-beta3 */
+/* incon feito no site Favicon https://favicon.io/favicon-generator/ */
+/* fontes pegas pelo googlefontes https://fonts.google.com/ */
+/* imagem pega no site unsplash https://unsplash.com/ */
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Josefin+Slab:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+*{    /* asterisco aplica para todos os elementos dentro desta pagina */
+    margin: 0;    /* define a área de margem nos quatro lados do elemento. */
+    padding: 0;   /* A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas. */
+}
+
+header{
+    width: 100%;    /* largura */
+    height: 100vh;    /* vh altura da visualização */
+    overflow: hidden;  /* O conteúdo é cortado e nenhuma barra de rolagem é exibida */
+    position: relative;    /* O bloco sai de sua posição original e o espaço que ela ocupava é preservado. */
+}
+
+.img-wrapper{    /* classe usamos o ponto antes */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8)
+}
+
+.img-wrapper img{    /* formatando imagens dentro de img-wrapper, */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5
+}
+
+.banner{
+    position: absolute;    /* retira o elemento da posição original, fazendo com que o lugar deixado seja ocupado pelo elemento que se segue. */
+    top: 30%;    /* distancia do elemento em relação a borda superior*/
+    left: 15%;    /* distancia do elemento em relação a borda esquerda */
+}
+
+.banner h1{
+    color: #ffffff;
+    font-size: 3.5rem;    /* A rem ("root em") é o tamanho de fonte do elemento-raiz do documento, que no caso é o body. */
+    font-family: "baloo 2",serif;    /* colocar uma fonte reserva caso não ache a primeira */
+    font-weight: 280;    /* especifica o peso ou a intensidade da fonte (ex.: negrito). */
+    text-shadow: 20;    /* acrescenta sombras ao texto. */
+}
