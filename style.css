@@ -13,6 +13,81 @@
 *{    /* asterisco aplica para todos os elementos dentro desta pagina */
     margin: 0;    /* define a área de margem nos quatro lados do elemento. */
     padding: 0;   /* A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas. */
+    list-style: none;    /* retirar bolinha dos li */
+    text-decoration: none;    /* tirar sublinhado li */
+
+}
+
+:root{
+    --font-primary: "baloo 2", serif;
+    --font-secundaria: "Josefin Slab", serif;
+    --font-action: "Mulish", serif;
+}
+
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer{
+    right: 18rem;
+}
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 2px #000;
+    transition: transform 1s;
+}
+
+.show-menu #line1{
+    transform: rotate(45deg) translate(.4rem, .2rem);
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem,-.38rem);
+}
+
+.hamburguer span {
+position: absolute;
+left: 3rem;
+height: 2rem;
+width: 6rem;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #a044ff;
+border-radius: 6%;
+color: #fff;
+font-family: var(--font-action);
+opacity: 0;
+}
+
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #a044ff;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;;
+    border-bottom: .5rem solid transparent; ;
+    left: -1rem;
+}
+.show-menu .hamburguer:hover span{
+    opacity: 1;
 }
 
 header{
@@ -55,7 +130,7 @@ header{
 .banner h1{
     color: #ffffff;
     font-size: 3.5rem;    /* A rem ("root em") é o tamanho de fonte do elemento-raiz do documento, que no caso é o body. */
-    font-family: "baloo 2",serif;    /* colocar uma fonte reserva caso não ache a primeira */
+    font-family: var(--font-primary) ;   /* colocar uma fonte reserva caso não ache a primeira */
     font-weight: 280;    /* especifica o peso ou a intensidade da fonte (ex.: negrito). */
     text-shadow: .3rem .4rem  2px rgba(0, 0, 0, .4 );/* acrescenta sombras ao texto. */
     line-height: 3.5rem;    /* altura da linha */
@@ -74,7 +149,7 @@ header{
 }
 
 .banner p{
-    font-family: "Josefin Slab", serif;
+    font-family: var(--font-secundaria);
     color: #fff;
     font-size: 2rem;
     text-shadow: .2rem .2rem  rgba(0, 0, 0, .4 );
@@ -84,7 +159,7 @@ header{
 }
 
 .banner button{
-    font-family: "Mulish", serif;
+    font-family: var(font-action);
     color: #000;
     letter-spacing: .1rem;    /* espaçamento das letras */
     text-transform: uppercase;    /* tranformando letras em maiusculas */
@@ -103,3 +178,66 @@ header{
     color: #fff; /* evento no botao, mudando a cor*/
 }
 
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);    /* afastando 50% de left e de top */
+
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #555;
+    transition: 1s;
+}
+
+.menu-link:hover{
+    color: #6a3093;
+}
+
+.social-midia{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.social-midia i{
+    background-color: #6a3093;
+    color: rgb(255, 255, 255);
+    width: 2.5rem;
+    height: 2.3rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.social-midia i:hover{
+    background-color: rgb(255, 0, 234);
+    
+}
