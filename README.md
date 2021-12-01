@@ -4,7 +4,7 @@ portfólio do desenvolvedor
 
 ## Tarefas
 
-Ocontrole das tarefas desse projeto seŕa realizado no GitHb
+O controle das tarefas desse projeto será realizado no GitHb
 
 ## Icones
 
