@@ -26,10 +26,10 @@
 
 
  <header>
-      <div class="img-wrapper">
+      <div class="img-wrapper"id="home">
         <img src="imagens/bg.jpg" alt="">
       </div>
-        <div class="banner">
+        <div class="banner" >
           <h1>Web Developer Full Stack</h1>
           <p>Tiago Abranges Garcia</p>
           <button>Saiba mais</button>
@@ -39,17 +39,17 @@
      <aside class="sidebar">
          <nav>
              <ul class="menu">
-                 <li class="menu-item"><a href="" class="menu-link">Home</a></li>
-                 <li class="menu-item"><a href="" class="menu-link">Conhecimentos</a></li>
-                 <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
-                 <li class="menu-item"><a href="" class="menu-link">Contato</a></li>
-                 <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
+                 <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                 <li class="menu-item"><a href="#conhecimento" class="menu-link">Conhecimentos</a></li>
+                 <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                 <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                 <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
              </ul>
          </nav>
          <div class="social-midia">
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/tiago_abranges/"  target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/T-abran" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tiagoabranges/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
      </aside>
 
@@ -63,7 +63,7 @@
             </h1>
         </div>
 
-        <div class="conhecimentos">
+        <div class="conhecimentos" id="conhecimento">
        
 
         <div class="conhecimento">
@@ -165,23 +165,24 @@ Jest
     </section>
 
 
-    <section class="sessao-projetos">
+    <section class="sessao-projetos" id="projetos">
         <div class="sessao-header">
             <h1>Projetos</h1>
         </div>
                 <div class="projetos">
+
                     <div class="card">
                     <div class="card-img-wrapper">
                         <img src="" alt=""><!-- projeto 1 que vou colocar -->
                     </div>
-
                     <div class="card-info">
                         <h2>Projeto 1</h2>
                         <h3>js ou react </h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias delectus corporis fugit perspiciatis in provident asperiores neque nulla eveniet sit corrupti, dolor consectetur laudantium, suscipit vitae saepe, sequi enim?</p>
-                        <button>Saiba Mais</button>
+                        <button class="btn">Saiba Mais</button>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="" alt=""><!-- projeto 2 -->
@@ -190,10 +191,11 @@ Jest
                         <h2>Projeto 2</h2>
                         <h3>html e css ou js</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quo laboriosam voluptatum quaerat voluptas qui, modi pariatur assumenda harum corporis dolorum quibusdam quae animi, sit culpa reiciendis doloribus aspernatur veniam.</p>
-                        <button>Saiba Mais</button>
+                        <button class="btn">Saiba Mais</button>
                     </div>
-</div>
-<div class="card">
+                </div>
+
+                <div class="card">
                     <div class="card-img-wrapper">
                         <img src="" alt=""> <!-- projeto 3 -->
                     </div>
@@ -201,15 +203,68 @@ Jest
                         <h2>Projeto 3</h2>
                         <h3>react</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dolor accusantium aut. Enim dolores necessitatibus temporibus. Nobis, aut quis. Officia voluptaes maxime delectus consequuntur? Ipsa ipsum tempore blanditiis est non!</p>
-                        <button>Saiba Mais</button>
+                        <button class="btn">Saiba Mais</button>
                     </div>
                 </div>
                 </div>
 
     </section>
    
+    <section class="sessao-contato">
+    <div class="contato-wrapper">
+        <div class="contato-left"></div>
+        <div class="contato-rigth">
+<h1>contato</h1>
+
+<form>
+    <div class="input-group">
+        <input type="text" class="field" id="nome">
+        <label for="nome" class="field-label" >Nome</label>
+    </div>
+    <div class="input-group">
+        <input type="text" class="field"id="email">
+        <label for="email" class="field-label" >E-mail</label>
+    </div>
+    <div class="input-group">
+       <textarea class="field" id="mensagem"></textarea>
+        <label for="mensagem" class="field-label" >Mensagem</label>
+    </div>
+    <button class="btn btn-submit"type="submit">Enviar</button>
+</form>
+     </div>
+    </div>
+    </section>
+
+    <section class="sessao-orcamento">
+        <div class="orcamento-wrapper">
+            <h1>Faça um Orçamento</h1>
+            <form>
+                <label for="qtde">qtde de Págenas</label>
+                <input type="number" min="1" name="qtde" id="qtde">
+                <label for="js">Preciso de um script JS</label>
+                <input type="checkbox" name="js" id="js">
+                <label>Layout</label>
+                <div class="group-layout">
+                    <div>
+                        <input type="radio" name="layout" id="layout-sim">
+                        <label for="layout-sim">Preciso de um Layout</label>
+                    </div>
+                   <div>
+                        <input type="radio" name="layout" id="layout-nao">
+                        <label for="layout-nao">Já tenho um Layout</label>
+                    </div>
+                </div>
+                        <label for="prazo">Prazo</label>
+                        <input type="range" name="prazo" id="prazo">
+                        <button class="btn btn-orcamento" type="submit">Enviar</button>
+                    
+                
+             
+
+            </form>
+        </div>
+    </section>
   </div>
- 
-  <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
