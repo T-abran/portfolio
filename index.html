@@ -25,7 +25,7 @@
 </div>
 
 
- <header>
+ <header id="home">
       <div class="img-wrapper"id="home">
         <img src="imagens/bg.jpg" alt="">
       </div>
@@ -56,7 +56,7 @@
     <!--  section.sessao-conhecimentos>(.sessao-header>h1)+.conhecimentos(.conhecimento>(
         .conhecimentos-header>i.fab+h3).conhecimento-text>p{lorem30})*6 SESSAO DE BAIXO -->
     
-    <section class="sessao-conhecimentos">
+    <section class="sessao-conhecimentos" >
         <div class="sessao-header">
             <h1>
                 Conhecimentos
@@ -210,7 +210,7 @@ Jest
 
     </section>
    
-    <section class="sessao-contato">
+    <section class="sessao-contato" id="contato">
     <div class="contato-wrapper">
         <div class="contato-left"></div>
         <div class="contato-rigth">
@@ -235,7 +235,7 @@ Jest
     </div>
     </section>
 
-    <section class="sessao-orcamento">
+    <section class="sessao-orcamento" id="orcamento">
         <div class="orcamento-wrapper">
             <h1>Faça um Orçamento</h1>
             <form>
@@ -257,14 +257,30 @@ Jest
                         <label for="prazo">Prazo</label>
                         <input type="range" name="prazo" id="prazo">
                         <button class="btn btn-orcamento" type="submit">Enviar</button>
-                    
-                
-             
-
             </form>
         </div>
     </section>
+
+
+    <footer>
+        <div class="footer-content">
+          <p>
+            Copyright &copy; 2020, ETECIA DS - Todos os diretos reservados
+          </p>
+          <div class="social-list">
+            <ul>
+              <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href=""><i class="fab fa-instagram"></i></a></li>
+              <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <a href="#home" id="link-topo">
+        <i class="fas fa-arrow-up"></i>
+      </a>
   </div>
-</body>
-<script src="script.js"></script>
+ </body>
+
+ <script src="script.js"></script>
 </html>
